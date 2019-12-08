@@ -1,0 +1,274 @@
+$couleur-princ: #41ef7b;
+$couleur-liens: #71f54a;
+
+$primary: #71f54a;
+
+$background-princ: #1d1d1d;
+
+$background-footer: rgb(29, 29, 29);
+$couleur-text-light: #dedddd;
+$couleur-text-dark: #5c5c5c;
+
+$divider-background-color: pink;
+
+@import "~bulma/bulma";
+
+
+body {
+	background-color: #1d1d1d;
+	p {
+		margin-bottom: 1em;
+	}
+}
+
+a {
+	color: $couleur-liens;
+}
+
+.is-2{
+	font-size:4em;
+}
+
+a.button.is-primary {
+	color: $primary !important;
+	border-color: $primary !important;
+}
+
+.title1-part1 {
+	text-transform: uppercase;
+	font-family: 'Teko';
+	color: $couleur-princ;
+	font-size: 3em !important;
+	line-height: 0.7em;
+}
+
+.title1-part2 {
+	color: $couleur-princ;
+	font-family: 'Muli';
+	font-size: 1em;
+}
+
+.home-top {
+	position: relative;
+
+	h2 {
+		font-family: "Philosopher";
+		font-size:2.5em;
+	}
+
+	.content-home-top {
+		background: url("~assets/img/fondfgrx2.jpg");
+		background-attachment: fixed;
+		background-size: cover;
+		display: block;
+		height: 65vh;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.inner-home {
+		vertical-align: middle;
+		width: 100%;
+		display: inline-block;
+		height: 50%;
+		position: absolute;
+		top: 0;
+		bottom: 0%;
+		margin: auto;
+		padding-left: 3em;
+	}
+
+	.fg {
+		font-size: 4em;
+	}
+
+	.devlyon {
+		font-size: 1.7em;
+	}
+
+	.technos {
+		color: white;
+		font-family: "Philosopher";
+		font-size: 2.2em;
+		margin-top: 1.2em;
+	}
+
+	.devlyon {
+		font-size: 1.5em;
+	}
+
+	.technos {
+		color: white;
+		font-family: "Philosopher";
+		font-size: 1.2em;
+		margin-top: 1.2em;
+	}
+}
+
+.whatfor {
+	color: white;
+	background: url("~assets/img/fondligne.png") bottom no-repeat;
+	background-size: 100%;
+	background-color: #3a3a3a;
+	background-position-y: 101%;
+	.title {
+		text-align: center;
+		color: white;
+	}
+
+	.whatfor-item {
+		margin-top: 2em;
+		margin-bottom: 2em;
+		padding: 3em;
+		padding-top: 8em;
+		//margin-top:4em;
+	}
+
+	.whatfor-item1 {
+		background: url("~assets/img/gear.png") top no-repeat;
+		background-size: 7em;
+	}
+
+	.whatfor-item2 {
+		background: url("~assets/img/responsive.png") top no-repeat;
+		background-size: 7em;
+	}
+
+	.whatfor-item3 {
+		background: url("~assets/img/mobile.png") top no-repeat;
+		background-size: 7em;
+	}
+}
+
+.home-realisations {
+	background: $background-princ;
+	color: $couleur-text-dark;
+
+	.is-4 {
+		color: $couleur-text-dark;
+	}
+
+	a{
+		color: $couleur-text-dark;
+	}
+
+	img {
+		height: auto;
+		max-width: 100%;
+	}
+
+}
+
+.home-items {
+	background: url("~assets/img/fleche.png") top no-repeat $couleur-princ;
+	background-size: 7em;
+	padding-bottom: 2em;
+	text-align: center;
+	h2 {
+		color: $couleur-text-dark;
+		font-size:3.5em;
+	}
+
+
+	.items {
+		font-size: 2.5em;
+		font-family: "Philosopher";
+	}
+
+	.image-item{
+		font-size: 2.5em;
+	}
+}
+
+.home-contact {
+	h2 {
+		color: $couleur-text-dark;
+	}
+
+	background: white;
+	padding: 4em;
+
+	.logo-mail {
+		font-size: 20em;
+		color: #5fef8e;
+	}
+
+	input,
+	textarea {
+		margin-bottom: 1em;
+	}
+
+	.enveloppe{
+		font-size: 20em;
+		color:
+		#5fef8e;
+	}
+}
+
+.home-presentation {
+	margin-top: -2px;
+	color: $couleur-text-light;
+	font-size: 1.2em;
+
+	.imagePresentation {
+		border-radius: 50%;
+		text-align: center;
+		object-position: center;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+h2 {
+	color: $couleur-text-light;
+	font-size: 4em;
+	font-family: "Teko";
+
+	.small {
+		font-size: 0.5em;
+	}
+}
+
+.title3 {
+	font-family: "Philosopher";
+}
+
+@media screen and (min-width:700px) {
+	.title1-part1 {
+		font-size: 2.5em;
+	}
+
+	footer.general-footer {
+		background: url("~assets/img/fond.png") top no-repeat;
+		background-size: 100%;
+		background-color: $background-footer;
+		padding: 4em;
+		color: $couleur-text-light;
+
+		.title1-part1 {
+			font-size: 4em!important;
+		}
+
+		.title1-part2 {
+			font-size: 1.3em;
+		}
+	}
+
+	.centered {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.data-more {
+		display: none;
+	}
+
+
+	.home-competences{
+		i {
+			font-size: 1.7em;
+		}
+	}
+}
