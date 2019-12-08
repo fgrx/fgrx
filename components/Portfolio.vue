@@ -7,7 +7,7 @@
       <div class="card">
         <div v-if="project.image" class="card-image">
           <figure class="image ">
-            <img v-lazy="project.image" /> 
+            <img v-lazy="project.image" alt="" /> 
           </figure>
         </div>
         <div class="card-content">

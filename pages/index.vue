@@ -20,7 +20,7 @@
     </section>
 
     <section>
-      <div class="whatfor section">
+      <div class="postsHome section">
         <div class="container">
           <div class="columns">
             <div class="column whatfor-item whatfor-item1">
