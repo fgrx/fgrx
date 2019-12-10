@@ -1,16 +1,21 @@
 <template>
   <div class="container">
     <div class="article section columns">
-        <div class="column is-8 is-offset-2">
-      <article>
-        <header>
-          <h1 class="is-1">{{ post.title }}</h1>
-          <h2 class="is-2">{{ post.subtitle }}</h2>
-          <img v-lazy="post.image" class="" alt="" />
-          <p class="resume">{{ post.resume }}</p>
-        </header>
-        <div class="content">{{ post.content }}</div>
-      </article>
+        <article>
+          <header>
+               <div class="column is-8 is-offset-2">
+                    <h1 class="is-1">{{ post.title }}</h1>
+                    <h2 class="is-2 is-family-sans-serif">{{ post.subtitle }}</h2>
+               </div> 
+               <div class="column is-10 is-offset-1">
+                    <img v-lazy="post.image" class="" alt="" />
+                </div> 
+          </header>
+           <div class="article-content column is-8 is-offset-2">
+                <p class="resume">{{ post.resume }}</p>
+                <div class="content">{{ post.content }}</div>
+          </div>
+        </article>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='content'>
     <div class="container">
       <section class='section'>
         <h1 class="is-1">Tous les articles</h1>

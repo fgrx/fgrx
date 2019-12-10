@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div > 
     <NavBar />
     <nuxt />
     <Footer />
@@ -15,6 +15,11 @@ export default {
   components: {
     Footer,
     NavBar
+  },
+  head: {
+    bodyAttrs: {
+      class: 'has-navbar-fixed-top'
+    }
   }
 }
 </script>

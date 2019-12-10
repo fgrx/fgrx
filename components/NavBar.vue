@@ -5,7 +5,7 @@
         <div class="navbar-brand">
           <nuxt-link to="/">
             <span class="title1-part1">Fabien Grignoux</span><br />
-            <span class="title1-part2">Développeur Web Fullstack à Lyon</span>
+            <span class="title1-part2">Développeur Fullstack à Lyon</span>
           </nuxt-link>
 
           <a
@@ -67,8 +67,5 @@ export default {
 </script>
 
 <style scoped>
-.navbar-brand {
-  padding-top: 7px;
-  font-size: 0.7em;
-}
+
 </style>

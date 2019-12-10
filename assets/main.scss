@@ -27,10 +27,15 @@ $divider-background-color: pink;
 	transition: all .5s cubic-bezier(.55,0,.1,1);
   }
   
-  
+
+html{
+	background:$background-princ;
+}
 
 
 body {
+	
+	height:100%;
 	background-color: $background-light;
 	p {
 		margin-bottom: 1em;
@@ -124,15 +129,13 @@ a.button.is-primary {
 }
 
 .postsHome {
-	color: white;
+	//color: white;
 	background: url("~assets/img/fondligne.png") bottom no-repeat;
 	background-size: 100%;
 	background-color: #3a3a3a;
 	background-position-y: 101%;
 	padding-bottom:100px;
 	.title {
-		text-align: center;
-		color: white;
 	}
 
 	.see-all-posts{
@@ -230,10 +233,7 @@ h2 {
 		font-size: 0.5em;
 	}
 }
-
-.title3 {
-	font-family: "Philosopher";
-}
+"now-build": "nuxt generate"
 
 .card{
 	background-color: $background-light;
@@ -282,8 +282,7 @@ footer.general-footer {
 	background: url("~assets/img/fond.png") top no-repeat;
 	background-size: 100%;
 	background-color: $background-light;
-	padding-left: 4em;
-	padding-top: 5em;
+	padding-top: 2em;
 	color: $couleur-text-light;
 
 	.title1-part1 {
@@ -293,7 +292,33 @@ footer.general-footer {
 	.title1-part2 {
 		font-size: 1.3em;
 	}
+
 }
+
+.navbar-brand{
+padding-left:2em;
+padding-top: 7px;
+font-size: 0.7em;
+}
+
+article{
+	h2{
+		color:$couleur-text-dark;
+		font-size:2em !important;
+	}
+	.resume{
+		font-weight:bold;
+	}
+
+	.article-content{
+		font-size:1.2em;
+	}
+}
+
+.code{
+	border:1px 	
+}
+
 
 @media screen and (max-width:700px) {
 	.title1-part1 {
@@ -307,11 +332,11 @@ footer.general-footer {
 		font-size:1.5em !important;
 	}
 
+
+
 	footer.general-footer {
-		background: url("~assets/img/fond.png") top no-repeat;
+		//background: url("~assets/img/fond.png") top no-repeat;
 		background-color: $background-light;
-		padding-left: 4em;
-		padding-top: 4em;
 		color: $couleur-text-light;
 
 		.title1-part1 {
@@ -320,6 +345,11 @@ footer.general-footer {
 
 		.title1-part2 {
 			font-size: 1.3em;
+		}
+
+		.section{
+			padding-top: 4em;
+			background:$background-princ;
 		}
 	}
 
