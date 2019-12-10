@@ -10,7 +10,9 @@ const servicePosts = {
 
     postsCollection.forEach((postItem) => {
       const postData = postItem.data()
-      posts.push(servicePosts.buildPostFromData(postData))
+      let post = servicePosts.buildPostFromData(postData)
+      post.image = post.image.replace("upload/","upload/w_800/")
+      posts.push(post)
     })
 
     return posts
@@ -24,7 +26,9 @@ const servicePosts = {
     let post = {}
     postsCollection.forEach((postItem) => {
       post = servicePosts.buildPostFromData(postItem.data())
+      post.image = post.image.replace("upload/","upload/w_800/")
     })
+    
     return post
   },
   buildPostFromData(postData) {
@@ -37,6 +41,9 @@ const servicePosts = {
       content: postData.content,
       image: postData.image
     }
+  },
+  resizeImageInPost(post,size){
+    return post.image.replace("uploads/","uploads/w_800/")
   }
 }
 
