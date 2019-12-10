@@ -11,7 +11,7 @@ const servicePosts = {
     postsCollection.forEach((postItem) => {
       const postData = postItem.data()
       let post = servicePosts.buildPostFromData(postData)
-      post.image = post.image.replace("upload/","upload/w_800/")
+      post.image = post.image.replace("upload/","upload/w_500/")
       posts.push(post)
     })
 
