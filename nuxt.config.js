@@ -79,6 +79,14 @@ export default {
    ** Build configuration
    */
   build: {
+    extend ( config, { isDev, isClient, isServer } ) {
+      if ( isServer ) {
+        config.externals = {
+          '@firebase/app': 'commonjs @firebase/app',
+          '@firebase/firestore': 'commonjs @firebase/firestore',
+        }
+      }
+    },
     postcss: {
       preset: {
         features: {

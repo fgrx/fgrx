@@ -7,15 +7,31 @@ $background-princ: #1d1d1d;
 
 $background-footer: rgb(29, 29, 29);
 $couleur-text-light: #dedddd;
+$background-light:#f5f5f5;
 $couleur-text-dark: #5c5c5c;
+$border-color:#5c5c5c;
 
 $divider-background-color: pink;
 
 @import "~bulma/bulma";
 
+/* transitions de page */
+.page-enter-active, .page-leave-active {
+	transition: opacity .5s
+  }
+  .page-enter, .page-leave-active {
+	opacity: 0
+  }
+
+  .container {
+	transition: all .5s cubic-bezier(.55,0,.1,1);
+  }
+  
+  
+
 
 body {
-	background-color: #1d1d1d;
+	background-color: $background-light;
 	p {
 		margin-bottom: 1em;
 	}
@@ -23,6 +39,12 @@ body {
 
 a {
 	color: $couleur-liens;
+}
+
+.is-1{
+	font-size:4em;
+	text-transform: uppercase;
+	font-family: 'Teko';
 }
 
 .is-2{
@@ -57,11 +79,11 @@ a.button.is-primary {
 	}
 
 	.content-home-top {
+		display:flex;
 		background: url("~assets/img/fondfgrx2.jpg");
 		background-attachment: fixed;
 		background-size: cover;
-		display: block;
-		height: 65vh;
+		height: 55vh;
 		top: 0;
 		bottom: 0;
 		width: 100%;
@@ -71,12 +93,7 @@ a.button.is-primary {
 		vertical-align: middle;
 		width: 100%;
 		display: inline-block;
-		height: 50%;
-		position: absolute;
-		top: 0;
-		bottom: 0%;
 		margin: auto;
-		padding-left: 3em;
 	}
 
 	.fg {
@@ -112,39 +129,22 @@ a.button.is-primary {
 	background-size: 100%;
 	background-color: #3a3a3a;
 	background-position-y: 101%;
+	padding-bottom:100px;
 	.title {
 		text-align: center;
 		color: white;
 	}
 
-	.whatfor-item {
-		margin-top: 2em;
-		margin-bottom: 2em;
-		padding: 3em;
-		padding-top: 8em;
-		//margin-top:4em;
-	}
-
-	.whatfor-item1 {
-		background: url("~assets/img/gear.png") top no-repeat;
-		background-size: 7em;
-	}
-
-	.whatfor-item2 {
-		background: url("~assets/img/responsive.png") top no-repeat;
-		background-size: 7em;
-	}
-
-	.whatfor-item3 {
-		background: url("~assets/img/mobile.png") top no-repeat;
-		background-size: 7em;
+	.see-all-posts{
+		text-align: center;
+		margin-top:1.5em;
 	}
 }
 
 .home-realisations {
 	background: $background-princ;
 	color: $couleur-text-dark;
-
+	
 	.is-4 {
 		color: $couleur-text-dark;
 	}
@@ -186,7 +186,7 @@ a.button.is-primary {
 		color: $couleur-text-dark;
 	}
 
-	background: white;
+	background: $background-light;
 	padding: 4em;
 
 	.logo-mail {
@@ -207,6 +207,7 @@ a.button.is-primary {
 }
 
 .home-presentation {
+	background-color:$background-princ;
 	margin-top: -2px;
 	color: $couleur-text-light;
 	font-size: 1.2em;
@@ -234,6 +235,66 @@ h2 {
 	font-family: "Philosopher";
 }
 
+.card{
+	background-color: $background-light;
+}
+
+
+.item-portfolio{
+	.card{
+	border:1px solid $border-color;
+}
+}
+
+.publication{
+	&:hover{
+		transform: scale(1.05,1.06);
+		transition-timing-function: ease-out;
+		transition-duration: 250ms;
+	}
+
+	background-color: $background-light;
+	border:1px solid $border-color;
+	
+	.publication-image{
+		height:300px;
+		width:100%;
+
+		img { 
+			height: 300px;
+			width:100%;
+			object-fit: cover;
+		}
+
+	}
+
+	.publication-titre{
+		z-index:1;
+		background-color:$light;
+		padding:1em;
+		width:100%;
+	}
+}
+
+
+footer.general-footer {
+	margin-top:3em;
+	background: url("~assets/img/fond.png") top no-repeat;
+	background-size: 100%;
+	background-color: $background-light;
+	padding-left: 4em;
+	padding-top: 5em;
+	color: $couleur-text-light;
+
+	.title1-part1 {
+		font-size: 4em!important;
+	}
+
+	.title1-part2 {
+		font-size: 1.3em;
+	}
+}
+
 @media screen and (max-width:700px) {
 	.title1-part1 {
 		font-size: 3em !important;
@@ -248,9 +309,9 @@ h2 {
 
 	footer.general-footer {
 		background: url("~assets/img/fond.png") top no-repeat;
-		background-size: 100%;
-		background-color: $background-footer;
-		padding: 4em;
+		background-color: $background-light;
+		padding-left: 4em;
+		padding-top: 4em;
 		color: $couleur-text-light;
 
 		.title1-part1 {
