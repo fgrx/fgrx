@@ -52,6 +52,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     //'@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@neneos/nuxt-animate.css',
     //'nuxt-cookie-control',
     ['nuxt-fontawesome', {
       imports: [

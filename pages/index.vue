@@ -5,14 +5,22 @@
         <div class="content-home-top ">
           <div class="inner-home section">
             <div class="container">
-              <h1 class="title">
-                <span class="title1-part1">{{ siteInfos.title1 }}</span
-                ><br /><span class="title1-part2">{{ siteInfos.title2 }}</span>
-              </h1>
-              <h2 class="title3" v-if="siteInfos.title3">
-                <font-awesome-icon :icon="['fas', 'heart']" />
-                {{ siteInfos.title3 }}
-              </h2>
+              <div class="columns">
+                <div class="column is-two-third">
+                  <h1 class="title">
+                    <span class="title1-part1">{{ siteInfos.title1 }}</span>
+                    <br />
+                    <span class="title1-part2">{{ siteInfos.title2 }}</span>
+                  </h1>
+                  <h2 class="title3" v-if="siteInfos.title3">
+                    <font-awesome-icon :icon="['fas', 'heart']" />
+                    {{ siteInfos.title3 }}
+                  </h2>
+                </div>
+                <div class="column image-right is-hidden-mobile">
+                  
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -37,12 +45,16 @@
             <div class="column is-6">
               {{ siteInfos.presentation }}
             </div>
-            <div class="is-3-desktop column is-6-mobile centered is-offset-1">
+            <div class="is-6-desktop column is-6-mobile centered ">
+              <!--
               <img
                 v-lazy="siteInfos.imagePresentation"
                 class="imagePresentation"
                 alt=""
-              />
+              />-->
+              <client-only>
+                <LogoComputers />
+              </client-only>
             </div>
           </div>
         </div>
@@ -87,10 +99,12 @@ import { serviceItems } from '~/services/Items.js'
 import { serviceGeneralInfos } from '~/services/GeneralInfos.js'
 import { servicePosts } from '~/services/Posts.js'
 
+
 import Portfolio from '~/components/Portfolio.vue'
 import Items from '~/components/Items.vue'
 import Contact from '~/components/Contact.vue'
 import Posts from '~/components/Posts.vue'
+import LogoComputers from '~/components/LogoComputers.vue'
 
 export default {
   components: {
@@ -98,6 +112,7 @@ export default {
     Items,
     Contact,
     Posts,
+    LogoComputers,
     fontawesome: {
       imports: [
         {

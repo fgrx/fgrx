@@ -75,6 +75,13 @@ a.button.is-primary {
 	font-size: 1em;
 }
 
+
+
+.svg{
+	width:100%;
+	height:auto;
+}
+
 .home-top {
 	position: relative;
 
@@ -92,6 +99,13 @@ a.button.is-primary {
 		top: 0;
 		bottom: 0;
 		width: 100%;
+		.image-right{
+			text-align:left;
+			img{
+				height:210px;
+			}
+		}
+
 	}
 
 	.inner-home {

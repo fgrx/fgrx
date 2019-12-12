@@ -1,6 +1,8 @@
 <template>
-  <div > 
+  <div >
+    <client-only> 
     <NavBar />
+    </client-only>
     <nuxt />
     <Footer />
   </div>
