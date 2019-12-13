@@ -34,7 +34,7 @@ export default {
       siteInfos: {}
     }
   },
-  async mounted() {
+  async beforeMount() {
     this.siteInfos = await serviceGeneralInfos.getGeneralInfosFromDB()
   }
 }

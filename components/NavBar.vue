@@ -1,6 +1,10 @@
 <template>
-  <div class=''>
-    <nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
+  <div class="">
+    <nav
+      class="navbar is-fixed-top is-black"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div class="container">
         <div class="navbar-brand">
           <nuxt-link to="/">
@@ -31,10 +35,7 @@
               Articles
             </nuxt-link>
 
-            <nuxt-link
-              to="/#home-portfolio"
-              class="navbar-item"
-            >
+            <nuxt-link to="/#home-portfolio" class="navbar-item">
               portfolio
             </nuxt-link>
 
@@ -55,17 +56,17 @@
 <script>
 export default {
   mounted() {
-    var burger = document.querySelector('.burger')
-    var nav = document.querySelector('#' + burger.dataset.target)
+    if (process.client) {
+      var burger = document.querySelector('.burger')
+      var nav = document.querySelector('#' + burger.dataset.target)
 
-    burger.addEventListener('click', function() {
-      burger.classList.toggle('is-active')
-      nav.classList.toggle('is-active')
-    })
+      burger.addEventListener('click', function() {
+        burger.classList.toggle('is-active')
+        nav.classList.toggle('is-active')
+      })
+    }
   }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
