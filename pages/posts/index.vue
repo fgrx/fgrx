@@ -1,8 +1,12 @@
 <template>
-  <div class='content'>
+  <div class='postList'>
     <div class="container">
       <section class='section'>
-        <h1 class="is-1">Tous les articles</h1>
+        <div class="columns">
+          <div class="column is-8">
+            <h1 class="is-1">Tous les articles</h1>
+          </div>
+        </div>
         <posts v-bind:posts="posts" />
       </section>
     </div>
@@ -15,9 +19,12 @@ import Posts from '~/components/Posts.vue'
 import { serviceGeneralInfos } from '~/services/GeneralInfos.js'
 import { servicePosts } from '~/services/Posts.js'
 
+import LogoCactus from '~/components/LogoCactus.vue'
+
 export default {
   components: {
     Posts,
+    LogoCactus
   },
   head() {
     return {

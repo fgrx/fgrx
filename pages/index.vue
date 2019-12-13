@@ -45,7 +45,7 @@
             <div class="column is-6">
               {{ siteInfos.presentation }}
             </div>
-            <div class="is-6-desktop column is-6-mobile centered ">
+            <div class="is-6-desktop column centered ">
               <!--
               <img
                 v-lazy="siteInfos.imagePresentation"
@@ -65,7 +65,7 @@
       <div class="section home-items">
         <div class="container">
           <h2 class="is-2">Mes compétences</h2>
-          <Items v-if="items.length" v-bind:items="items" />
+          <Competences v-if="competences.length" v-bind:competences="competences" />
         </div>
       </div>
     </section>
@@ -95,13 +95,13 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import { servicePortfolio } from '~/services/Portfolio.js'
-import { serviceItems } from '~/services/Items.js'
+import { serviceCompetences } from '~/services/Competences.js'
 import { serviceGeneralInfos } from '~/services/GeneralInfos.js'
 import { servicePosts } from '~/services/Posts.js'
 
 
 import Portfolio from '~/components/Portfolio.vue'
-import Items from '~/components/Items.vue'
+import Competences from '~/components/Competences.vue'
 import Contact from '~/components/Contact.vue'
 import Posts from '~/components/Posts.vue'
 import LogoComputers from '~/components/LogoComputers.vue'
@@ -109,7 +109,7 @@ import LogoComputers from '~/components/LogoComputers.vue'
 export default {
   components: {
     Portfolio,
-    Items,
+    Competences,
     Contact,
     Posts,
     LogoComputers,
@@ -145,7 +145,7 @@ export default {
       portfolioProjects: await servicePortfolio.getPortfolioFromDB(
         numberOfProjectsToDisplay
       ),
-      items: await serviceItems.getItemsFromDB(),
+      competences: await serviceCompetences.getCompetencesFromDB(),
       posts: await servicePosts.getPostsFromDB(2)
     }
   },

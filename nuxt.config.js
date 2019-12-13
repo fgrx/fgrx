@@ -15,8 +15,12 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-      { rel:'stylesheet', href:"https://fonts.googleapis.com/css?family=Cinzel|Gothic+A1|Lalezar|Muli|Noto+Sans+TC|Philosopher|Ramabhadra|Teko&display=swap"}
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Cinzel|Gothic+A1|Lalezar|Muli|Noto+Sans+TC|Philosopher|Ramabhadra|Teko&display=swap'
+      }
     ]
   },
   /*
@@ -26,15 +30,22 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    "~/assets/main.scss"
-  ],
+  css: ['~/assets/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    "~/plugins/firebase.js",
-    "~/plugins/lazyload.js"
+    {
+      src: '~/plugins/firebase.js'
+    },
+    {
+      src: '~/plugins/lazyload.js',
+      mode: "client"
+    },
+    {
+      src: '~/plugins/aos.js',
+      mode: "client"
+    }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -54,22 +65,27 @@ export default {
     '@nuxtjs/pwa',
     '@neneos/nuxt-animate.css',
     //'nuxt-cookie-control',
-    ['nuxt-fontawesome', {
-      imports: [
-       {
-         set: '@fortawesome/free-solid-svg-icons',
-         icons: ['fas']
-       },
-       {
-         set:'@fortawesome/free-brands-svg-icons',
-         icons: ['fab']
-       }
-     ]
-    }]
-    ,
-    ['@nuxtjs/google-analytics', {
-      id: "UA-141104841-1" || ''
-    }]
+    [
+      'nuxt-fontawesome',
+      {
+        imports: [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas']
+          },
+          {
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['fab']
+          }
+        ]
+      }
+    ],
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-141104841-1' || ''
+      }
+    ]
   ],
   /*
    ** Axios module configuration
@@ -80,11 +96,11 @@ export default {
    ** Build configuration
    */
   build: {
-    extend ( config, { isDev, isClient, isServer } ) {
-      if ( isServer ) {
+    extend(config, { isDev, isClient, isServer }) {
+      if (isServer) {
         config.externals = {
           '@firebase/app': 'commonjs @firebase/app',
-          '@firebase/firestore': 'commonjs @firebase/firestore',
+          '@firebase/firestore': 'commonjs @firebase/firestore'
         }
       }
     },

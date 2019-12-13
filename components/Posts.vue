@@ -2,6 +2,7 @@
 <div class=''>
   <div class="columns is-multiline">
     <div class="column is-half" v-for="(post,index) in posts">
+      <div :class=" {'fadeInLeft animated faster': index % 2 === 0, 'fadeInRight animated faster': index % 2 !== 0 }" >
       <nuxt-link :to="{ name : 'posts-slug', params : {slug : post.slug} }">
         <div class="publication">
           <div class="publication-image">
@@ -14,6 +15,7 @@
           </div>
         </div>
       </nuxt-link>
+      </div>
     </div>
   </div>
 
