@@ -22,6 +22,12 @@ import { servicePosts } from '~/services/Posts.js'
 import LogoCactus from '~/components/LogoCactus.vue'
 
 export default {
+  data(){
+    return{
+      siteInfos:this.siteInfos,
+      posts:this.posts
+    }
+  },
   components: {
     Posts,
     LogoCactus

@@ -128,10 +128,18 @@ export default {
   },
   head () {
     return {
-      title: 'Fabien Grignoux - Développeur fullstack freelance à Lyon',
+      title: this.siteInfos.title1 + ' - ' + this.siteInfos.title2,
       meta: [
-        { hid: 'description', name: 'description', content: "Développeur d'applications web et mobile sur les technologies Vuejs, Angular et Symfony" }
+        { hid: 'description', name: 'description', content: this.siteInfos.description }
       ]
+    }
+  },
+  data(){
+    return{
+      siteInfos:this.siteInfos,
+      posts:this.posts,
+      portfolioProjects:this.portfolioProjects,
+      competences:this.competences
     }
   },
   async asyncData({ params }) {

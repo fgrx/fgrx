@@ -1,4 +1,4 @@
-import { servicePosts } from '../services/Posts.js'
+import { servicePosts } from '@/services/Posts.js'
 
 test("Service get posts",async()=>{
     const posts = await  servicePosts.getPostsFromDB(2);

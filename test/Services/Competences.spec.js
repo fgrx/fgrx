@@ -1,4 +1,5 @@
-import { serviceCompetences} from "../services/Competences"
+import { serviceCompetences} from "@/services/Competences"
+
 
 test("Service get Competences",async()=>{
     const Competences = await serviceCompetences.getCompetencesFromDB();

@@ -24,6 +24,21 @@
 <script>
 import { servicePosts } from '~/services/Posts'
 export default {
+  head(){
+    let title=this.post.title
+    if(this.post.subtitle)title+=" - "+this.post.subtitle
+    let resume = this.post.resume
+    return{
+      title: title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.resume
+        }
+      ]
+    }
+  },
   async asyncData({ params }) {
     return {
       post: await servicePosts.getPostFromDB(params.slug)
