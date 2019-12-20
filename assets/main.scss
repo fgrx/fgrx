@@ -238,6 +238,10 @@ a.button.is-primary {
 	}
 }
 
+h1{
+	line-height:1.1em;
+}
+
 h2 {
 	color: $couleur-text-light;
 	font-size: 4em;
@@ -245,6 +249,18 @@ h2 {
 
 	.small {
 		font-size: 0.5em;
+	}
+}
+
+.content{
+	h2{
+		margin-top:1.2em !important;
+	}
+
+	img{
+		text-align:center;
+		width:100%;
+		height:auto;
 	}
 }
 
@@ -333,6 +349,10 @@ article{
 .code{
 	border:1px 	
 }
+
+.centered{
+    text-align:center;
+  }
 
 
 @media screen and (max-width:700px) {

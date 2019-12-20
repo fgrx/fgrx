@@ -5,15 +5,15 @@
           <header>
                <div class="column is-8 is-offset-2">
                     <h1 class="is-1">{{ post.title }}</h1>
-                    <h2 class="is-2 is-family-sans-serif">{{ post.subtitle }}</h2>
+                    <p class="is-3 is-family-sans-serif ">{{ post.subtitle }}</p>
                </div> 
-               <div class="column is-10 is-offset-1">
+               <div class="column is-10 is-offset-1 centered">
                     <img v-lazy="post.image" class="" alt="" />
                 </div> 
           </header>
            <div class="article-content column is-8 is-offset-2">
                 <p class="resume">{{ post.resume }}</p>
-                <div class="content">{{ post.content }}</div>
+                <div class="content" v-html='post.content'></div>
           </div>
         </article>
       </div>
@@ -46,3 +46,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+</style>
