@@ -11,6 +11,8 @@ $background-light:#f5f5f5;
 $couleur-text-dark: #5c5c5c;
 $border-color:#5c5c5c;
 
+$couleur-lien-text:#59844c;
+
 $divider-background-color: pink;
 
 @import "~bulma/bulma";
@@ -261,6 +263,14 @@ h2 {
 		text-align:center;
 		width:100%;
 		height:auto;
+	}
+
+	a{
+		color:$couleur-lien-text;
+		text-decoration:underline;
+		:hover{
+			color:black;
+		}
 	}
 }
 
