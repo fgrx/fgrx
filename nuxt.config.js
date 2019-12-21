@@ -1,3 +1,19 @@
+import { fireDB } from './plugins/firebase.js'
+const generateRoutesForPosts= async()=>{
+  let refPosts = fireDB.collection('posts').where('published','==',true)
+
+  const postsCollection = await refPosts.get()
+  const routes = []
+
+  postsCollection.forEach((postItem) => {
+    const postData = postItem.data()
+    const route="/posts/"+postData.slug
+    routes.push(route)
+  })
+
+  return routes
+}
+
 export default {
   mode: 'universal',
   /*
@@ -115,5 +131,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  generate:{
+    routes : generateRoutesForPosts
   }
 }
