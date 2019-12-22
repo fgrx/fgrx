@@ -61,6 +61,10 @@ export default {
     {
       src: '~/plugins/aos.js',
       mode: "client"
+    },
+    {
+      src:"~/plugins/disqus.js",
+      mode: "client"
     }
   ],
   /*

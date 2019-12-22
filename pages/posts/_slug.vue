@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section post-article">
     <div class="container">
       <div class="article columns">
         <article>
@@ -12,14 +12,23 @@
               <img v-lazy="post.image" class="" alt="" />
             </div>
           </header>
-          <div class="columns">
-            <div class="article-content column is-8 is-offset-2">
-              <p class="resume">{{ post.resume }}</p>
-              <div class="content" v-html="post.content"></div>
-            </div>
+
+          <div class="article-content column is-8 is-offset-2">
+            <p class="resume">{{ post.resume }}</p>
+            <div class="content" v-html="post.content"></div>
           </div>
         </article>
       </div>
+              <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <h2>Commentaires</h2>
+            <div class="comments">
+              <vue-disqus
+                shortname="fgrx"
+              ></vue-disqus>
+            </div>
+          </div>
+        </div>
     </div>
   </section>
 </template>
