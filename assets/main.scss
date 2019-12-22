@@ -260,9 +260,14 @@ h2 {
 	}
 
 	img{
+		display: block;
+		margin: 0 auto;	
+	}
+
+	em{
 		text-align:center;
-		width:100%;
-		height:auto;
+		display: block;
+		margin: 0 auto;	
 	}
 
 	a{
