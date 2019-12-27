@@ -1,5 +1,5 @@
 <template>
-  <div class='postList'>
+  <div class='listPage postList'>
     <div class="container">
       <section class='section'>
         <div class="columns">

@@ -7,38 +7,37 @@ $background-princ: #1d1d1d;
 
 $background-footer: rgb(29, 29, 29);
 $couleur-text-light: #dedddd;
-$background-light:#f5f5f5;
+$background-light: #f5f5f5;
 $couleur-text-dark: #5c5c5c;
-$border-color:#5c5c5c;
-$color-text-article:#4a4a4a;
+$border-color: #5c5c5c;
+$color-text-article: #4a4a4a;
 
-$couleur-lien-text:#59844c;
+$couleur-lien-text: #59844c;
 
 $divider-background-color: pink;
 
 @import "~bulma/bulma";
 
 /* transitions de page */
-.page-enter-active, .page-leave-active {
-	transition: opacity .5s
-  }
-  .page-enter, .page-leave-active {
-	opacity: 0
-  }
-
-  .container {
-	transition: all .5s cubic-bezier(.55,0,.1,1);
-  }
-  
-
-html{
-	background:$background-princ;
+.page-enter-active,
+.page-leave-active {
+	transition: opacity .5s;
+}
+.page-enter,
+.page-leave-active {
+	opacity: 0;
 }
 
+.container {
+	transition: all .5s cubic-bezier(.55, 0, .1, 1);
+}
+
+html {
+	background: $background-princ;
+}
 
 body {
-	
-	height:100%;
+	height: 100%;
 	background-color: $background-light;
 	p {
 		margin-bottom: 1em;
@@ -49,14 +48,14 @@ a {
 	color: $couleur-liens;
 }
 
-.is-1{
-	font-size:4em;
+.is-1 {
+	font-size: 4em;
 	text-transform: uppercase;
 	font-family: 'Teko';
 }
 
-.is-2{
-	font-size:4em;
+.is-2 {
+	font-size: 4em;
 }
 
 a.button.is-primary {
@@ -78,11 +77,9 @@ a.button.is-primary {
 	font-size: 1em;
 }
 
-
-
-.svg{
-	width:100%;
-	height:auto;
+.svg {
+	width: 100%;
+	height: auto;
 }
 
 .home-top {
@@ -90,11 +87,11 @@ a.button.is-primary {
 
 	h2 {
 		font-family: "Philosopher";
-		font-size:2.5em;
+		font-size: 2.5em;
 	}
 
 	.content-home-top {
-		display:flex;
+		display: flex;
 		background: url("~assets/img/fondfgrx2.jpg");
 		background-attachment: fixed;
 		background-size: cover;
@@ -102,13 +99,12 @@ a.button.is-primary {
 		top: 0;
 		bottom: 0;
 		width: 100%;
-		.image-right{
-			text-align:left;
-			img{
-				height:210px;
+		.image-right {
+			text-align: left;
+			img {
+				height: 210px;
 			}
 		}
-
 	}
 
 	.inner-home {
@@ -151,25 +147,25 @@ a.button.is-primary {
 	background-size: 100%;
 	background-color: #3a3a3a;
 	background-position-y: 101%;
-	padding-bottom:100px;
+	padding-bottom: 100px;
 	.title {
 	}
+}
 
-	.see-all-posts{
-		text-align: center;
-		margin-top:1.5em;
-	}
+.see-all {
+	text-align: center;
+	margin-top: 1.5em;
 }
 
 .home-realisations {
 	background: $background-princ;
 	color: $couleur-text-dark;
-	
+
 	.is-4 {
 		color: $couleur-text-dark;
 	}
 
-	a{
+	a {
 		color: $couleur-text-dark;
 	}
 
@@ -177,7 +173,6 @@ a.button.is-primary {
 		height: auto;
 		max-width: 100%;
 	}
-
 }
 
 .home-items {
@@ -187,16 +182,15 @@ a.button.is-primary {
 	text-align: center;
 	h2 {
 		color: $couleur-text-dark;
-		font-size:3.5em;
+		font-size: 3.5em;
 	}
-
 
 	.items {
 		font-size: 2.5em;
 		font-family: "Philosopher";
 	}
 
-	.image-item{
+	.image-item {
 		font-size: 2.5em;
 	}
 }
@@ -219,15 +213,14 @@ a.button.is-primary {
 		margin-bottom: 1em;
 	}
 
-	.enveloppe{
+	.enveloppe {
 		font-size: 20em;
-		color:
-		#5fef8e;
+		color: #5fef8e;
 	}
 }
 
 .home-presentation {
-	background-color:$background-princ;
+	background-color: $background-princ;
 	margin-top: -2px;
 	color: $couleur-text-light;
 	font-size: 1.2em;
@@ -241,8 +234,14 @@ a.button.is-primary {
 	}
 }
 
-h1{
-	line-height:1.1em;
+.listPage {
+	a {
+		color: $couleur-text-dark;
+	}
+}
+
+h1 {
+	line-height: 1.1em;
 }
 
 h2 {
@@ -255,85 +254,81 @@ h2 {
 	}
 }
 
-.post-article{
-	p{
-		color:$color-text-article
+.post-article {
+	p {
+		color: $color-text-article;
 	}
-	h2{
-		color:$color-text-article;
+	h2 {
+		color: $color-text-article;
 	}
 }
 
-.content{
-	h2{
-		margin-top:1.2em !important;
+.content {
+	h2 {
+		margin-top: 1.2em !important;
 	}
 
-	img{
+	img {
 		display: block;
-		margin: 0 auto;	
+		margin: 0 auto;
 	}
 
-	em{
-		text-align:center;
+	em {
+		text-align: center;
 		display: block;
-		margin: 0 auto;	
+		margin: 0 auto;
 	}
 
-	a{
-		color:$couleur-lien-text;
-		text-decoration:underline;
-		:hover{
-			color:$color-text-article;
+	a {
+		color: $couleur-lien-text;
+		text-decoration: underline;
+		:hover {
+			color: $color-text-article;
 		}
 	}
 }
 
-
-.card{
+.card {
 	background-color: $background-light;
 }
 
-
-.item-portfolio{
-	.card{
-	border:1px solid $border-color;
+.item-portfolio {
+	.card {
+		border: 1px solid $border-color;
+	}
 }
-}
 
-.publication{
-	&:hover{
-		transform: scale(1.05,1.06);
+.publication {
+	&:hover {
+		transform: scale(1.05, 1.06);
 		transition-timing-function: ease-out;
 		transition-duration: 250ms;
 	}
 
 	background-color: $background-light;
-	border:1px solid $border-color;
-	
-	.publication-image{
-		height:300px;
-		width:100%;
+	border: 1px solid $border-color;
 
-		img { 
+	.publication-image {
+		height: 300px;
+		width: 100%;
+
+		img {
 			height: 300px;
-			width:100%;
+			width: 100%;
 			object-fit: cover;
 		}
-
 	}
 
-	.publication-titre{
-		z-index:1;
-		background-color:$light;
-		padding:1em;
-		width:100%;
+	.publication-titre {
+		z-index: 1;
+		background-color: $light;
+		padding: 1em;
+		width: 100%;
 	}
 }
 
-
 footer.general-footer {
-	margin-top:3em;
+	margin-top: 3em;
 	background: url("~assets/img/fond.png") top no-repeat;
 	background-size: 100%;
 	background-color: $background-light;
@@ -341,46 +336,43 @@ footer.general-footer {
 	color: $couleur-text-light;
 
 	.title1-part1 {
-		font-size: 4em!important;
+		font-size: 4em !important;
 	}
 
 	.title1-part2 {
 		font-size: 1.3em;
 	}
-
 }
 
-.navbar-brand{
-padding-left:2em;
-padding-top: 7px;
-font-size: 0.7em;
+.navbar-brand {
+	padding-left: 2em;
+	padding-top: 7px;
+	font-size: 0.7em;
 }
 
-article{
-
-	h2{
-		color:$couleur-text-dark;
-		font-size:2em !important;
+article {
+	h2 {
+		color: $couleur-text-dark;
+		font-size: 2em !important;
 	}
-	.resume{
-		font-weight:bold;
+	.resume {
+		font-weight: bold;
 	}
 
-	.article-content{
-		font-size:1.2em;
+	.article-content {
+		font-size: 1.2em;
 	}
 }
 
-.code{
-	border:1px 	
+.code {
+	border: 1px;
 }
 
-.centered{
-    text-align:center;
-  }
+.centered {
+	text-align: center;
+}
 
-
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
 	.title1-part1 {
 		font-size: 3em !important;
 	}
@@ -388,11 +380,9 @@ article{
 		font-size: 1.4em !important;
 	}
 
-	.title3{
-		font-size:1.5em !important;
+	.title3 {
+		font-size: 1.5em !important;
 	}
-
-
 
 	footer.general-footer {
 		//background: url("~assets/img/fond.png") top no-repeat;
@@ -400,16 +390,16 @@ article{
 		color: $couleur-text-light;
 
 		.title1-part1 {
-			font-size: 4em!important;
+			font-size: 4em !important;
 		}
 
 		.title1-part2 {
 			font-size: 1.3em;
 		}
 
-		.section{
+		.section {
 			padding-top: 4em;
-			background:$background-princ;
+			background: $background-princ;
 		}
 	}
 
@@ -423,8 +413,7 @@ article{
 		display: none;
 	}
 
-
-	.home-competences{
+	.home-competences {
 		i {
 			font-size: 1.7em;
 		}

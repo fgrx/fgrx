@@ -17,9 +17,7 @@
                     {{ siteInfos.title3 }}
                   </h2>
                 </div>
-                <div class="column image-right is-hidden-mobile">
-                  
-                </div>
+                <div class="column image-right is-hidden-mobile"></div>
               </div>
             </div>
           </div>
@@ -27,17 +25,22 @@
       </div>
     </section>
 
-    <section id='home-articles'>
+    <section id="home-articles">
       <div class="postsHome section">
         <div class="container">
-          <h2 class='is-2'>Derniers articles</h2>
-          <posts v-bind:posts='posts' /> 
-          <p class='see-all-posts'><nuxt-link :to="{path:'posts'}" class="button "><font-awesome-icon :icon="['fas', 'plus']" /> Voir tous les articles</nuxt-link></p>
+          <h2 class="is-2">Derniers articles</h2>
+          <posts v-bind:posts="posts" />
+          <p class="see-all">
+            <nuxt-link :to="{ path: 'posts' }" class="button "
+              ><font-awesome-icon :icon="['fas', 'plus']" /> Voir tous les
+              articles</nuxt-link
+            >
+          </p>
         </div>
       </div>
     </section>
 
-    <section id='home-presentation'>
+    <section id="home-presentation">
       <div class="section home-presentation">
         <div class="container">
           <h2 class="is-2">Présentation</h2>
@@ -65,7 +68,10 @@
       <div class="section home-items">
         <div class="container">
           <h2 class="is-2">Mes compétences</h2>
-          <Competences v-if="competences.length" v-bind:competences="competences" />
+          <Competences
+            v-if="competences.length"
+            v-bind:competences="competences"
+          />
         </div>
       </div>
     </section>
@@ -78,6 +84,12 @@
             v-if="portfolioProjects.length"
             v-bind:projects="portfolioProjects"
           />
+          <p class="see-all">
+            <nuxt-link :to="{ path: 'portfolio' }" class="button "
+              ><font-awesome-icon :icon="['fas', 'plus']" /> Voir plus de
+              projets</nuxt-link
+            >
+          </p>
         </div>
       </div>
     </section>
@@ -87,7 +99,6 @@
         <contact v-bind:siteInfos="siteInfos" />
       </div>
     </section>
-
   </div>
 </template>
 
@@ -98,7 +109,6 @@ import { servicePortfolio } from '~/services/Portfolio.js'
 import { serviceCompetences } from '~/services/Competences.js'
 import { serviceGeneralInfos } from '~/services/GeneralInfos.js'
 import { servicePosts } from '~/services/Posts.js'
-
 
 import Portfolio from '~/components/Portfolio.vue'
 import Competences from '~/components/Competences.vue'
@@ -126,20 +136,24 @@ export default {
       ]
     }
   },
-  head () {
+  head() {
     return {
       title: this.siteInfos.title1 + ' - ' + this.siteInfos.title2,
       meta: [
-        { hid: 'description', name: 'description', content: this.siteInfos.description }
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.siteInfos.description
+        }
       ]
     }
   },
-  data(){
-    return{
-      siteInfos:this.siteInfos,
-      posts:this.posts,
-      portfolioProjects:this.portfolioProjects,
-      competences:this.competences
+  data() {
+    return {
+      siteInfos: this.siteInfos,
+      posts: this.posts,
+      portfolioProjects: this.portfolioProjects,
+      competences: this.competences
     }
   },
   async asyncData({ params }) {
@@ -157,9 +171,7 @@ export default {
       posts: await servicePosts.getPostsFromDB(2)
     }
   },
-  mounted(){
-    
-  }
+  mounted() {}
 }
 </script>
 

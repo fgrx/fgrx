@@ -138,5 +138,10 @@ export default {
   },
   generate:{
     routes : generateRoutesForPosts
+  },
+  pwa: {
+    icon: {
+      /* icon options */
+    }
   }
 }

@@ -40,3 +40,9 @@ export default {
   mounted() {}
 }
 </script>
+
+<style scoped>
+  .card{
+    background-color:white
+  }
+</style>
