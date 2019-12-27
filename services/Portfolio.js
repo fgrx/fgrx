@@ -4,7 +4,7 @@ const servicePortfolio = {
   getPortfolioFromDB: async (numberOfProjects) => {
     let projects = []
 
-    const refProjects = fireDB.collection('portfolio').orderBy('rank',"asc").limit(numberOfProjects)
+    const refProjects = fireDB.collection('portfolio').orderBy('rank',"desc").limit(numberOfProjects)
     const projectsCollection = await refProjects.get()
 
     projectsCollection.forEach((project) => {
