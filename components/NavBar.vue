@@ -35,8 +35,8 @@
               Articles
             </nuxt-link>
 
-            <nuxt-link to="/#home-portfolio" class="navbar-item">
-              portfolio
+            <nuxt-link to="/portfolio" class="navbar-item">
+              Portfolio
             </nuxt-link>
 
             <nuxt-link to="/#home-presentation" class="navbar-item">
@@ -57,13 +57,23 @@
 export default {
   mounted() {
     if (process.client) {
-      var burger = document.querySelector('.burger')
-      var nav = document.querySelector('#' + burger.dataset.target)
+      let burger = document.querySelector('.burger')
+      let nav = document.querySelector('#' + burger.dataset.target)
 
       burger.addEventListener('click', function() {
         burger.classList.toggle('is-active')
         nav.classList.toggle('is-active')
       })
+
+      document.addEventListener(
+        'click',
+        function(event) {
+          if (!event.target.matches('.navbar-item')) return
+          burger.classList.toggle('is-active')
+          nav.classList.toggle('is-active')
+        },
+        false
+      )
     }
   }
 }
