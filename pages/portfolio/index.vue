@@ -4,10 +4,9 @@
       <section class="section">
         <div class="columns">
           <div class="column is-8">
-            <h1 class="is-1">Portfolio complet</h1>
+            <h1 class="is-1">Portfolio</h1>
             <p>
-              Voici quelques projets sur lesquels j'ai pu travailler durant ma
-              carrière.
+              Voici quelques projets sur lesquels j'ai pu travailler.
             </p>
           </div>
         </div>
