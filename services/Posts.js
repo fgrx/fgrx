@@ -2,8 +2,12 @@ import { fireDB } from '~/plugins/firebase.js'
 
 const servicePosts = {
   getPostsFromDB: async (numberOfPosts = null) => {
-    let refPosts = fireDB.collection('posts').where('published','==',true).orderBy('date', 'asc')
-    if (numberOfPosts) refPosts.limit(numberOfPosts)
+
+    if (numberOfPosts){
+      var refPosts = fireDB.collection('posts').where('published','==',true).orderBy('date', 'desc').limit(numberOfPosts)
+    }else{
+      var refPosts = fireDB.collection('posts').where('published','==',true).orderBy('date', 'desc')
+    }
 
     const postsCollection = await refPosts.get()
     const posts = []
