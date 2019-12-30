@@ -80,7 +80,7 @@ export default {
 
       if(result.status=200){
         this.submittedMessage =
-        '<div class="is-success notification"><p>Votre message a bien été envoyé.</p><p>Je vous recontacterai très prochainement.</p></div>'
+        '<div class="is-success notification"><p>Votre message a bien été envoyé.</p><p>Je vous répondrai très prochainement.</p></div>'
       }else{
         this.submittedMessage =
         '<div class="is-alert notification"><p>Une erreur s\'est produite. Veuillez me contacter à fabien.grignoux@outlook.com</p></div>'
