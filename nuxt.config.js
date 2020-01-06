@@ -84,6 +84,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@neneos/nuxt-animate.css',
+    ['@nuxtjs/google-tag-manager', { id: 'UA-141104841-1' }],
     //'nuxt-cookie-control',
     [
       'nuxt-fontawesome',
@@ -98,12 +99,6 @@ export default {
             icons: ['fab']
           }
         ]
-      }
-    ],
-    [
-      '@nuxtjs/google-analytics',
-      {
-        id: 'UA-141104841-1' || ''
       }
     ]
   ],
