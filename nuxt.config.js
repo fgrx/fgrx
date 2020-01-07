@@ -72,10 +72,7 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-141104841-1'
-    }]
+    '@nuxtjs/eslint-module'
   ],
   /*
    ** Nuxt.js modules
@@ -87,7 +84,9 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@neneos/nuxt-animate.css',
-    ['@nuxtjs/google-tag-manager', { id: 'UA-141104841-1' }],
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-141104841-1'
+    }],
     //'nuxt-cookie-control',
     [
       'nuxt-fontawesome',
