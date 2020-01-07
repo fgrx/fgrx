@@ -1,13 +1,13 @@
 import { fireDB } from './plugins/firebase.js'
-const generateRoutesForPosts= async()=>{
-  let refPosts = fireDB.collection('posts').where('published','==',true)
+const generateRoutesForPosts = async () => {
+  let refPosts = fireDB.collection('posts').where('published', '==', true)
 
   const postsCollection = await refPosts.get()
   const routes = []
 
   postsCollection.forEach((postItem) => {
     const postData = postItem.data()
-    const route="/posts/"+postData.slug
+    const route = '/posts/' + postData.slug
     routes.push(route)
   })
 
@@ -56,15 +56,15 @@ export default {
     },
     {
       src: '~/plugins/lazyload.js',
-      mode: "client"
+      mode: 'client'
     },
     {
       src: '~/plugins/aos.js',
-      mode: "client"
+      mode: 'client'
     },
     {
-      src:"~/plugins/disqus.js",
-      mode: "client"
+      src: '~/plugins/disqus.js',
+      mode: 'client'
     }
   ],
   /*
@@ -84,9 +84,13 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@neneos/nuxt-animate.css',
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-141104841-1'
-    }],
+    '@nuxtjs/sitemap',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-141104841-1'
+      }
+    ],
     ['@nuxtjs/google-tag-manager', { id: 'UA-141104841-1' }],
     //'nuxt-cookie-control',
     [
@@ -134,12 +138,18 @@ export default {
      */
     extend(config, ctx) {}
   },
-  generate:{
-    routes : generateRoutesForPosts
+  generate: {
+    routes: generateRoutesForPosts
   },
   pwa: {
     icon: {
       /* icon options */
     }
+  },
+
+  sitemap: {
+    hostname: 'https://developpeurfullstack.fr',
+    gzip: true,
+    routes: generateRoutesForPosts
   }
 }
