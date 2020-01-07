@@ -87,7 +87,7 @@ export default {
     ['@nuxtjs/google-analytics', {
       id: 'UA-141104841-1'
     }],
-    ['@nuxtjs/google-tag-manager', { id: 'UA-141104841-1' }],
+    ['@nuxtjs/google-tag-manager', { id: 'GTM-KXBJX7L' }],
     //'nuxt-cookie-control',
     [
       'nuxt-fontawesome',
