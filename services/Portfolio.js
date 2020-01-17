@@ -4,7 +4,10 @@ const servicePortfolio = {
   getPortfolioFromDB: async (numberOfProjects) => {
     let projects = []
 
-    const refProjects = fireDB.collection('portfolio').orderBy('rank',"desc").limit(numberOfProjects)
+    const refProjects = fireDB
+      .collection('portfolio')
+      .orderBy('rank', 'desc')
+      .limit(numberOfProjects)
     const projectsCollection = await refProjects.get()
 
     projectsCollection.forEach((project) => {
@@ -14,7 +17,7 @@ const servicePortfolio = {
         url: project.data().url,
         github: project.data().github,
         tech: project.data().tech,
-        image: project.data().image
+        image: project.data().image.replace('upload/', 'upload/w_500/')
       })
     })
 
