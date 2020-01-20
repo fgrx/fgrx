@@ -17,7 +17,11 @@ const servicePortfolio = {
         url: project.data().url,
         github: project.data().github,
         tech: project.data().tech,
-        image: project.data().image.replace('upload/', 'upload/w_500/')
+        image: project
+          .data()
+          .image.replace('upload/', 'upload/w_500/')
+          .replace('.jpg', '.webp')
+          .replace('.png', '.webp')
       })
     })
 

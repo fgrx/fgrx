@@ -2,11 +2,17 @@ import { fireDB } from '~/plugins/firebase.js'
 
 const servicePosts = {
   getPostsFromDB: async (numberOfPosts = null) => {
-
-    if (numberOfPosts){
-      var refPosts = fireDB.collection('posts').where('published','==',true).orderBy('date', 'desc').limit(numberOfPosts)
-    }else{
-      var refPosts = fireDB.collection('posts').where('published','==',true).orderBy('date', 'desc')
+    if (numberOfPosts) {
+      var refPosts = fireDB
+        .collection('posts')
+        .where('published', '==', true)
+        .orderBy('date', 'desc')
+        .limit(numberOfPosts)
+    } else {
+      var refPosts = fireDB
+        .collection('posts')
+        .where('published', '==', true)
+        .orderBy('date', 'desc')
     }
 
     const postsCollection = await refPosts.get()
@@ -15,7 +21,8 @@ const servicePosts = {
     postsCollection.forEach((postItem) => {
       const postData = postItem.data()
       let post = servicePosts.buildPostFromData(postData)
-      post.image = post.image.replace("upload/","upload/w_500/")
+      post.image = post.image.replace('upload/', 'upload/w_500/')
+      post.image = post.image.replace('.jpg', '.webp').replace('.png', '.webp')
       posts.push(post)
     })
 
@@ -30,9 +37,12 @@ const servicePosts = {
     let post = {}
     postsCollection.forEach((postItem) => {
       post = servicePosts.buildPostFromData(postItem.data())
-      post.image = post.image.replace("upload/","upload/w_800/")
+      post.image = post.image
+        .replace('upload/', 'upload/w_800/')
+        .replace('.jpg', '.webp')
+        .replace('.png', '.webp')
     })
-    
+
     return post
   },
   buildPostFromData(postData) {
@@ -46,8 +56,8 @@ const servicePosts = {
       image: postData.image
     }
   },
-  resizeImageInPost(post,size){
-    return post.image.replace("uploads/","uploads/w_800/")
+  resizeImageInPost(post) {
+    return post.image.replace('uploads/', 'uploads/w_800/')
   }
 }
 
