@@ -52,6 +52,12 @@ export default {
           content: title
         },
         {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://developpeurfullstack.fr/posts/' + this.post.slug
+        },
+
+        {
           hid: 'og:description',
           name: 'og:description',
           content: this.post.resume

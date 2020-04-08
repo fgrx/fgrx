@@ -151,6 +151,11 @@ export default {
           content: this.siteInfos.title1 + ' - ' + this.siteInfos.title2
         },
         {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://developpeurfullstack.fr'
+        },
+        {
           hid: 'og:description',
           name: 'og:description',
           content: this.siteInfos.description
@@ -169,6 +174,7 @@ export default {
       '@type': 'WebSite',
       creator: 'Fabien Grignoux',
       author: 'Fabien Grignoux',
+      url: 'https://developpeurfullstack.fr',
       about:
         'Développement web Javascript, Vue.js, Nuxt, Angular et Php/Symfony',
       contentLocation: 'Lyon France',

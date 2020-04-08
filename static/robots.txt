@@ -1,1 +1,1 @@
-Sitemap: http://developpeurfullstack.fr/sitemap.xml
+Sitemap: https://developpeurfullstack.fr/sitemap.xml
