@@ -30,6 +30,9 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
+    htmlAttrs: {
+      lang: 'fr'
+    },
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
@@ -88,7 +91,12 @@ export default {
     [
       '@nuxtjs/google-analytics',
       {
-        id: 'UA-141104841-1'
+        id: 'UA-141104841-1',
+        debug: {
+          enabled: true,
+          sendHitTask: true,
+          trace: true
+        }
       }
     ],
     ['@nuxtjs/google-tag-manager', { id: 'UA-141104841-1' }],

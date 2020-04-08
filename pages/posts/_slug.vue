@@ -19,16 +19,14 @@
           </div>
         </article>
       </div>
-              <div class="columns">
-          <div class="column is-8 is-offset-2">
-            <h2>Commentaires</h2>
-            <div class="comments">
-              <vue-disqus
-                shortname="fgrx"
-              ></vue-disqus>
-            </div>
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+          <h2>Commentaires</h2>
+          <div class="comments">
+            <vue-disqus shortname="fgrx"></vue-disqus>
           </div>
         </div>
+      </div>
     </div>
   </section>
 </template>
@@ -51,9 +49,15 @@ export default {
       ]
     }
   },
-  async asyncData({ params }) {
+  async asyncData({ params, error }) {
+    const post = await servicePosts.getPostFromDB(params.slug)
+
+    if (!post) {
+      console.log('error')
+      error({ statusCode: 404, message: 'Page non trouvée.' })
+    }
     return {
-      post: await servicePosts.getPostFromDB(params.slug)
+      post
     }
   }
 }
