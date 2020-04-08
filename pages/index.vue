@@ -144,8 +144,37 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.siteInfos.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.siteInfos.title1 + ' - ' + this.siteInfos.title2
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.siteInfos.description
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: 'https://developpeurfullstack.fr/ogimage.jpg'
         }
       ]
+    }
+  },
+  jsonld() {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      creator: 'Fabien Grignoux',
+      author: 'Fabien Grignoux',
+      about:
+        'Développement web Javascript, Vue.js, Nuxt, Angular et Php/Symfony',
+      contentLocation: 'Lyon France',
+      inLanguage: 'fr',
+      keywords:
+        'Javascript, développeur, fullstrack, lyon, php, symfony, vue.js,angular'
     }
   },
   data() {

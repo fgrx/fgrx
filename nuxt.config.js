@@ -23,12 +23,7 @@ export default {
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     htmlAttrs: {
       lang: 'fr'
@@ -68,7 +63,8 @@ export default {
     {
       src: '~/plugins/disqus.js',
       mode: 'client'
-    }
+    },
+    { src: '~/plugins/jsonld' }
   ],
   /*
    ** Nuxt.js dev-modules

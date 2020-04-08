@@ -45,8 +45,37 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.post.resume
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.post.resume
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: this.post.image
         }
       ]
+    }
+  },
+  jsonld() {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      creator: 'Fabien Grignoux',
+      author: 'Fabien Grignoux',
+      about: 'Développement web',
+      abstract: this.post.resume,
+      contentLocation: 'Lyon France',
+      inLanguage: 'fr',
+      image: this.post.image,
+      content: this.post.content
     }
   },
   async asyncData({ params, error }) {
